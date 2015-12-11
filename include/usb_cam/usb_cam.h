@@ -55,8 +55,6 @@ extern "C"
 #include <string>
 #include <sstream>
 
-#include <sensor_msgs/Image.h>
-
 namespace usb_cam {
 
 class UsbCam {
@@ -81,7 +79,7 @@ class UsbCam {
   void shutdown(void);
 
   // grabs a new image from the camera
-  void grab_image(sensor_msgs::Image* image);
+  //void grab_image(sensor_msgs::Image* image);
 
   // enables/disable auto focus
   void set_auto_focus(int value);
