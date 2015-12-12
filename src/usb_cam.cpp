@@ -1054,21 +1054,21 @@ void UsbCam::shutdown(void)
   image_ = NULL;
 }
 
-#if 0
-void UsbCam::grab_image(sensor_msgs::Image* msg)
+#if 1
+void UsbCam::grab_image(char* buf)
 {
   // grab the image
   grab_image();
   // stamp the image
-  msg->header.stamp = ros::Time::now();
+  //msg->header.stamp = ros::Time::now();
   // fill the info
   if (monochrome_)
   {
-    fillImage(*msg, "mono8", image_->height, image_->width, image_->width, image_->image);
+    //fillImage(*msg, "mono8", image_->height, image_->width, image_->width, image_->image);
   }
   else
   {
-    fillImage(*msg, "rgb8", image_->height, image_->width, 3 * image_->width, image_->image);
+    //fillImage(*msg, "rgb8", image_->height, image_->width, 3 * image_->width, image_->image);
   }
 }
 #endif
